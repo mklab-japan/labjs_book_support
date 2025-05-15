@@ -6,4 +6,4 @@
 ## ch7
 ### フランカー課題
  * [デモ](ch7/demo/)
- * <a href = "ch7/7-flanker-task-demo.json">ソースファイル</a>
+ * <a href = "ch7/7-flanker-task-demo.json" download>ソースファイル</a>
