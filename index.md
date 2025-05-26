@@ -8,7 +8,48 @@
  * [デモ](ch2/demo/)
  * <a href = "ch2/2-LMDF-demo.json" download>ソースファイル</a>
 
+## ch5
+### Hello world!
+ * [デモ](ch5/demo1/)
+ * <a href = "ch5/5-hello-world-demo.json" download>ソースファイル</a>
+ 
+### 図形表示（Screen canvas）
+ * [デモ](ch5/demo2/)
+ * <a href = "ch5/5-screen-canvas-demo.json" download>ソースファイル</a>
+ 
+## ch6
+### 心理学調査1（簡易アンケート）
+ * [デモ](ch6/demo1/)
+ * <a href = "ch6/6-survey1-demo.json" download>ソースファイル</a>
+
+### 心理学調査2（日本語版TCAQ）
+ * [デモ](ch6/demo2/)
+ * <a href = "ch6/6-survey2-demo.json" download>ソースファイル</a>
+
+### 心理学調査2 Scripts版（日本語版TCAQ）
+ * [デモ](ch6/demo3/)
+ * <a href = "ch6/6-survey2-scripts-demo.json" download>ソースファイル</a>
+ 
 ## ch7
 ### フランカー課題
  * [デモ](ch7/demo/)
  * <a href = "ch7/7-flanker-task-demo.json" download>ソースファイル</a>
+
+## ch8
+### ストループ課題
+ * [デモ](ch8/demo1/)
+ * <a href = "ch8/8-stroop-task-demo.json" download>ソースファイル</a>
+
+### サイモン課題
+ * [デモ](ch8/demo2/)
+ * <a href = "ch8/8-simon-task-demo.json" download>ソースファイル</a> 
+
+## ch11
+### 再認記憶課題
+ * [デモ](ch11/demo/)
+ * <a href = "ch11/11-old-new-recognition-task.json" download>ソースファイル</a>
+ 
+## ch14
+### 再認記憶課題
+ * [デモ](ch14/demo2/)
+ * <a href = "ch14/14-old-new-recognition-task.json" download>ソースファイル</a>

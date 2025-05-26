@@ -1,0 +1,247 @@
+{
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "before:prepare",
+          "code": "// Text/Instructions\nthis.options.items.push({\n          \"type\": \"text\",\n           \"title\": \"調査\",\n           \"content\": \"以下の文章を読んで，あなたにどの程度当てはまるかどうかを回答してください。当てはまる選択肢を選ぶことで回答を行って下さい。\"\n        })\n\n// Multiple choice\nconst items = [\n  '個人的な問題について考え続けるせいで，寝付きにくいことがよくある', \n  '私は心をかき乱す思考を避けられないことがよくある', \n  '誰かが私を不当に非難しても，「その人が正しいかもしれない 」と考えずにはいられない', \n  'ストレスを感じたとしても，なんとか自分の思考を制御できる', \n  '私はいつも自分の考えや行動を非難している', \n  'どれだけ小さなことだとしても，挫折は私を打ちのめす', \n  'あることについて考えないようにしようと決めたとき，大抵は成功する', \n  '特定のことについて考えるのをやめることは，私にとって非常にたやすい', \n  '「恥ずかしい経験」，または「面倒な経験」，あるいは「苦痛な経験」の後には，「心配な気分」または「イライラした気分」，あるいは「悲しい気分」を長い間感じる', \n  'わずらわしい思考から抜け出すことは私にとって簡単だ', \n  '私の心を頻繁に支配する考え，あるいはイメージがいくつかある', \n  '私の過去には，思い出さずにはいられないネガティブなことがいくつかある', \n  '私は，数日間は(恋人，両親，友達などとの)喧嘩を頭から追い出すことができない', \n  '私はポジティブ感情やネガティブ感情を制御することが得意だと思う', \n  '私が私の考えを制御するというよりは，私の考えが私を制御している', \n  '頭に入ってくることを避けられない思考がある', \n  '私の思考は制御することができない', \n  '私は普段は嫌な思考によって打ちのめされることはない', \n  '私はいくつかの思考（例，「私はダメだ」，「私は役に立たない」，「私には得意なことは何もない」など）から抜け出すことができない', \n  '怒ったり，誰かと喧嘩したりした時は，そのことについて考えるのをやめられず，集中したり，仕事（勉強）したりすることがほとんどできない', \n  '私は，ほとんど苦労することなく，「不快な思考」あるいは「不快なイメージ」を頭から追い出す', \n  '私は忍耐強く，冷静さを簡単に失ったりはしない'\n];\n\n//各項目と尺度名を配列に格納\nvar itemsArray = [];\nvar itemNO;\n\nfor(let i = 0; i < items.length; i++){\n  itemNO = i + 1;\n  itemsArray.push(\n    {\n      \"label\": items[i],\n      \"name\": \"TCAQ\"+itemNO\n    }\n  )\n}\n\n//ランダム順にする場合に並び替え（ランダムにする場合はコメントを消してください）\n//itemsArray = this.random.shuffle(itemsArray)\n\n//選択肢\nfor (let i = 0; i < items.length; i++){\nitemNO = i+1;\n  this.options.items.push({\n          \"required\": true,\n          \"type\": \"radio\",\n          \"options\": [\n            {\n              \"label\": \"1.まったく当てはまらない\",\n              \"coding\": \"1\"\n            },\n            {\n              \"label\": \"2.あまり当てはまらない\",\n              \"coding\": \"2\"\n            },\n            {\n              \"label\": \"3.どちらともいえない\",\n              \"coding\": \"3\"\n            },\n            {\n              \"label\": \"4.やや当てはまる\",\n              \"coding\": \"4\"\n            },\n            {\n              \"label\": \"5.かなり当てはまる\",\n              \"coding\": \"5\"\n            }\n          ],\n          \"label\": itemNO +\". \"+ itemsArray[i].label,\n          \"name\": itemsArray[i].name,\n          \"shuffle\": false\n        })\n}\n\n// Raw HTML\nthis.options.items.push({\n          \"type\": \"html\",\n          \"content\": \"<div class=\\\"content-horizontal-center\\\"><button>次へ</button></div>\"\n        })\n\nthis.options.submitButtonPosition = 'hidden';"
+        }
+      ],
+      "title": "questionnaire",
+      "_tab": "Scripts"
+    },
+    "5": {
+      "id": "5",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "本実験・調査の目的",
+          "content": "本実験・調査の実施責任者は○○大学○○学部の○○○○です。本実験・調査への参加はあなたの任意によるものです。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "1. 本実験・調査の目的",
+          "content": "○○○○について調べることが本実験・調査の目的です。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "2. 本実験・調査の手続き",
+          "content": "もし，あなたが本実験・調査に参加にした場合，あなたは○○○○をしていただきます。この実験・調査の所要時間は約○○分程度です。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "3. 潜在的なリスク・苦痛など",
+          "content": "実験・調査による多少の疲労は除き，潜在的なリスクや苦痛はありません。また，いつ，いかなる理由でも，自由に実験を中止していただけます（6.参加と中止もご参照ください）。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "4. 参加による利益",
+          "content": "あなたが本実験・調査に参加することで学習，認知，感情についての研究の発展に繋がります。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "5. 匿名性の確保",
+          "content": "本実験・調査によって得られた情報は法律による開示請求を除き，匿名性が維持されます。匿名性は実験参加者番号の付与，統計的解析によって保たれます。収集されたデータは個人が特定できるデータが公表されることは決してありません。二次分析などのため個人を特定できない形で個人データを公開する場合があります。加えて，統計的に処理されたデータを学会発表や論文として公表する場合があります。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "6. 参加と中止",
+          "content": "あなたは本実験・調査への参加もしくは不参加を自由に選択できます。また，参加した場合でも，いつでも，どのような理由でも，途中で実験・調査を中止することができます。もし，途中で実験・調査を中止したくなった場合は，「ESCキー」を押した後，ウィンドウを閉じることで実験・調査を中止できます。"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "7. 実験・調査実施者への問い合わせ",
+          "content": "本実験・調査に対して質問がある場合は，実施責任者にお問い合わせください。"
+        },
+        {
+          "required": true,
+          "type": "checkbox",
+          "label": "実験・調査への参加に同意いただけますか？同意いただける方 はチェックをお願いします。同意いただけない方は， ESC を押 した後，ウィンドウを閉じてください。",
+          "options": [
+            {
+              "label": "上記の説明をよく読み，理解した上で，実験・調査への参加に 同意します。",
+              "coding": "yes"
+            }
+          ],
+          "name": "IC"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "次へ",
+      "submitButtonPosition": "right",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "informedConsent"
+    },
+    "6": {
+      "id": "6",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "required": true,
+          "type": "input",
+          "label": "年齢",
+          "attributes": {
+            "type": "number",
+            "min": "18",
+            "max": "99"
+          },
+          "help": "年齢を半角数字で入力してください",
+          "name": "age"
+        },
+        {
+          "required": false,
+          "type": "input",
+          "label": "性別",
+          "name": "sex",
+          "help": "あなたの性別を入力してください"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "次へ",
+      "submitButtonPosition": "right",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "demographic"
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "5",
+        "6",
+        "1"
+      ],
+      "parameters": [],
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "6-survey2-scripts-demo",
+        "description": "",
+        "repository": "",
+        "contributors": ""
+      }
+    }
+  },
+  "version": [
+    20,
+    2,
+    4
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20viewport%20setup%20--%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F",
+        "source": "library"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
