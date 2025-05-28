@@ -54,7 +54,7 @@
  * <a href = "ch9/9-rating-task-canvas-aoi-demo.json" download>ソースファイル</a> 
 
 ## ch10
-### 評価課題（Page HTML）（キーボード）
+### 評価課題（Page HTML）
  * [デモ](ch10/demo1/)
  * <a href = "ch10/10-rating-task-page-html-demo.json" download>ソースファイル</a>
 
