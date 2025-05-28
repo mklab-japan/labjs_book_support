@@ -44,12 +44,34 @@
  * [デモ](ch8/demo2/)
  * <a href = "ch8/8-simon-task-demo.json" download>ソースファイル</a> 
 
+## ch9
+### 評価課題（Canvas Screen）（キーボード）
+ * [デモ](ch9/demo1/)
+ * <a href = "ch9/9-rating-task-canvas-key-demo.json" download>ソースファイル</a>
+
+### 評価課題（Canvas Screen）（AOI）
+ * [デモ](ch9/demo2/)
+ * <a href = "ch9/9-rating-task-canvas-aoi-demo.json" download>ソースファイル</a> 
+
+## ch10
+### 評価課題（Page HTML）（キーボード）
+ * [デモ](ch10/demo1/)
+ * <a href = "ch10/10-rating-task-page-html-demo.json" download>ソースファイル</a>
+
+### 評価課題（Page HTML）（スライダー）
+ * [デモ](ch10/demo2/)
+ * <a href = "ch10/10-rating-task-page-html-slider-demo.json" download>ソースファイル</a> 
+
 ## ch11
 ### 再認記憶課題
  * [デモ](ch11/demo/)
  * <a href = "ch11/11-old-new-recognition-task.json" download>ソースファイル</a>
  
 ## ch14
+### フランカー課題
+ * [デモ](ch14/demo1/)
+ * <a href = "ch14/14-flanker-task-scripts-demo.json" download>ソースファイル</a>
+
 ### 再認記憶課題
  * [デモ](ch14/demo2/)
  * <a href = "ch14/14-old-new-recognition-task.json" download>ソースファイル</a>
