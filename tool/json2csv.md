@@ -1,7 +1,7 @@
 ## lab.js JSON → CSV変換ツール
 
- * <label for="jsonFile">JSONファイルを選択：</label><input type="file" id="jsonFile" accept=".json,.txt" />
- * <button id="convertBtn" disabled>CSVに変換</button>
+ <label for="jsonFile">JSONファイルを選択：</label><input type="file" id="jsonFile" accept=".json,.txt" />
+ <button id="convertBtn" disabled>CSVに変換</button>
 
 <script>
   // JSONフラット化（1階層ネスト展開）

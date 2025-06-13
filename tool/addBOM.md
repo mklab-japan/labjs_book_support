@@ -1,7 +1,7 @@
 ## 複数CSV → BOM付きZIPダウンロード
 
- * <input type="file" id="csvFiles" accept=".csv" multiple />
- * <button id="convertBtn">BOMを追加</button>
+ <input type="file" id="csvFiles" accept=".csv" multiple />
+ <button id="convertBtn">BOMを追加</button>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
