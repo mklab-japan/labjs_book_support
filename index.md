@@ -63,25 +63,25 @@
  * [デモ](ch10/demo2/)
  * <a href = "ch10/10-rating-task-page-html-slider-demo.json" download>ソースファイル</a> 
 
-### ch11
-#### 再認記憶課題
+## ch11
+### 再認記憶課題
  * [デモ](ch11/demo/)
  * <a href = "ch11/11-old-new-recognition-task.json" download>ソースファイル</a>
  
-### ch14
-#### フランカー課題
+## ch14
+### フランカー課題
  * [デモ](ch14/demo1/)
  * <a href = "ch14/14-flanker-task-scripts-demo.json" download>ソースファイル</a>
 
-#### 再認記憶課題
+### 再認記憶課題
  * [デモ](ch14/demo2/)
  * <a href = "ch14/14-old-new-recognition-task.json" download>ソースファイル</a>
 
-### 便利ツール
+## 便利ツール
 書籍では紹介していませんが，lab.jsと合わせて使うと便利なツールをいくつか作成しました。
 
-#### [addBOM：csvへのBOM付与](tool/addBOM.html)
+### [addBOM：csvへのBOM付与](tool/addBOM.html)
 lab.jsで出力されるcsvにはBOMがついていないため，Excelなどで読み込むと文字化けします。このツールでcsvにBOMを付与してから読み込むと文字化けしません。変換したファイルをZIPでダウンロードします。複数ファイルを選択可能です。
 
-#### [json2csv：JSONをcsvに変換](tool/json2csv.html)
+### [json2csv：JSONをcsvに変換](tool/json2csv.html)
 JATOSで実施した場合に出力されるJSONをcsvに変換するツールです。metaなどのネストしている部分も展開できます。
