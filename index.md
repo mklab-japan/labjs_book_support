@@ -75,3 +75,14 @@
 ### 再認記憶課題
  * [デモ](ch14/demo2/)
  * <a href = "ch14/14-old-new-recognition-task.json" download>ソースファイル</a>
+
+## 便利ツール
+書籍では紹介していませんが，lab.jsと合わせて使うと便利なツールをいくつか作成しました。
+
+### csvへのBOM付与
+ * [addBOM](tool/addBOM.html)
+    * lab.jsで出力されるcsvにはBOMがついていないため，Excelなどで読み込むと文字化けします。このツールでcsvにBOMを付与してから読み込むと文字化けしません。
+
+### JSONをcsvに変換
+ * [json2csv](tool/json2csv.html)
+    * JATOSで実施した場合に出力されるJSONをcsvに変換するツールです。metaなどのネストしている部分も展開できます。
