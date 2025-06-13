@@ -1,3 +1,6 @@
+<!-- カスタムフォントCSSの読み込み -->
+<link rel="stylesheet" href="assets/css/custom.css">
+
 # ch2
 ## 指示忘却課題（リスト法）
  * [デモ](ch2/demo/)
