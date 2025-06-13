@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<title>lab.js JSON to CSV</title>
-<!-- カスタムフォントCSSの読み込み -->
-<link rel="stylesheet" href="assets/css/custom.css">
-</head>
-<body>
-<h1>lab.js JSON → CSV変換ツール</h1>
+## lab.js JSON → CSV変換ツール
 
 <label for="jsonFile">JSONファイルを選択：</label>
 <input type="file" id="jsonFile" accept=".json,.txt" />
@@ -83,15 +74,4 @@
 
     const csv = toCSV(flatData, keys);
     const bom = new Uint8Array([0xEF, 0xBB, 0xBF]);  // UTF-8 BOM
-    const blob = new Blob([bom, csv], { type: 'text/csv;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'labjs_output.csv';
-    a.click();
-    URL.revokeObjectURL(url);
-  });
-</script>
-</body>
-</html>
+    const blob = new Blob([bom, csv], { type: 'text/csv;charset=utf-
