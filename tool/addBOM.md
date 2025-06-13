@@ -1,5 +1,9 @@
 ## 複数CSV → BOM付きZIPダウンロード
 
+### 使い方
+csvファイルを選択後（複数選択可），「BOMを追加」ボタンをクリックしてください。ZIPファイルでダウンロードできます。
+
+### ツール
  <input type="file" id="csvFiles" accept=".csv" multiple />
  <button id="convertBtn">BOMを追加</button>
 

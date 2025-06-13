@@ -1,5 +1,9 @@
 ## lab.js JSON → CSV変換ツール
 
+### 使い方
+JSONファイルを選択後，「CSVに変換」ボタンをクリックしてください。csvファイルでダウンロードできます。ファイル形式は.jsonまたは.txtに対応しています。
+
+### ツール
  <label for="jsonFile">JSONファイルを選択：</label><input type="file" id="jsonFile" accept=".json,.txt" />
  <button id="convertBtn" disabled>CSVに変換</button>
 
@@ -73,4 +77,13 @@
 
     const csv = toCSV(flatData, keys);
     const bom = new Uint8Array([0xEF, 0xBB, 0xBF]);  // UTF-8 BOM
-    const blob = new Blob([bom, csv], { type: 'text/csv;charset=utf-
+    const blob = new Blob([bom, csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'labjs_output.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+</script>
