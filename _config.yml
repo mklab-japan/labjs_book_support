@@ -1,6 +1,5 @@
 remote_theme: pages-themes/slate@v0.2.0
 title: 「オンライン心理学調査・実験入門：GoogleフォームとJavaScript (lab.js)を用いて」サポートサイト
-description: 「オンライン心理学調査・実験入門：GoogleフォームとJavaScript (lab.js)を用いて」で章ごとに紹介したlab.jsプログラムのソースファイルとデモ，便利ツールを提供しています。ソースファイルはJSON形式です。ソースファイルはクリックするとダウンロードできます。なお，デモを利用したデータ収集はご遠慮ください。
 plugins:
   - jekyll-remote-theme
 
