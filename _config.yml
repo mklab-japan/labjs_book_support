@@ -1,1 +1,5 @@
-remote_theme: riggraz/no-style-please
+remote_theme: pages-themes/primer@v0.2.0
+title: 書籍タイトル
+description: 書籍のサポートページです。
+plugins:
+  - jekyll-remote-theme
