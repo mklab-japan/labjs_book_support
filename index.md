@@ -80,10 +80,8 @@
 ### 便利ツール
 書籍では紹介していませんが，lab.jsと合わせて使うと便利なツールをいくつか作成しました。
 
-#### addBOM：csvへのBOM付与
+#### [addBOM：csvへのBOM付与](tool/addBOM.html)
 lab.jsで出力されるcsvにはBOMがついていないため，Excelなどで読み込むと文字化けします。このツールでcsvにBOMを付与してから読み込むと文字化けしません。
- * [addBOM](tool/addBOM.html)
 
-#### json2csv：JSONをcsvに変換
+#### [json2csv：JSONをcsvに変換](tool/json2csv.html)
 JATOSで実施した場合に出力されるJSONをcsvに変換するツールです。metaなどのネストしている部分も展開できます。
- * [json2csv](tool/json2csv.html)
