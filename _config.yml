@@ -1,5 +1,5 @@
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: pages-themes/slate@v0.2.0
 title: 書籍タイトル
-description: 本書に関するサポート情報はこちら
+description: サポートページ
 plugins:
   - jekyll-remote-theme
