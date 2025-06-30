@@ -9,6 +9,10 @@
  * [デモ](ch2/demo/)
  * <a href = "ch2/2-LMDF-demo.json" download>ソースファイル</a>
 
+## ch4
+### デモデータ（4-demo-deta.xlsx)
+ * <a href = "ch4/4-demo-deta.xlsx" download>デモデータ</a>
+
 ## ch5
 ### Hello world!
  * [デモ](ch5/demo1/)
@@ -67,7 +71,11 @@
 ### 再認記憶課題
  * [デモ](ch11/demo/)
  * <a href = "ch11/11-old-new-recognition-task.json" download>ソースファイル</a>
- 
+
+## ch13
+### デモデータ（13-demo-deta.csv)
+ * <a href = "ch13/13-demo-deta.csv" download>デモデータ</a>
+
 ## ch14
 ### フランカー課題
  * [デモ](ch14/demo1/)
