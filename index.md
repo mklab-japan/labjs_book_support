@@ -74,7 +74,7 @@
 
 ## ch13
 ### デモデータ（13-demo-deta.csv)
- * <a href = "ch13/13-demo-deta.csv" download>デモデータ</a>
+ * <a href = "ch13/data/13-demo-data.csv" download>デモデータ</a>
 
 ## ch14
 ### フランカー課題
