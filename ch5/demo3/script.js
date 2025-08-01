@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "6-survey1-demo",
+      "filePrefix": "6-survey2-scripts-demo",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "6 survey1 demo",
+    "title": "6-survey2-scripts-demo",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -76,10 +76,10 @@ const study = lab.util.fromObject({
         {
           "required": true,
           "type": "checkbox",
-          "label": "実験・調査への参加に同意いただけますか？同意いただける方はチェックをお願いします。同意いただけない方は，ESC を押した後，ウィンドウを閉じてください。",
+          "label": "実験・調査への参加に同意いただけますか？同意いただける方 はチェックをお願いします。同意いただけない方は， ESC を押 した後，ウィンドウを閉じてください。",
           "options": [
             {
-              "label": "上記の説明をよく読み，理解した上で，実験・調査への参加に同意します。",
+              "label": "上記の説明をよく読み，理解した上で，実験・調査への参加に 同意します。",
               "coding": "yes"
             }
           ],
@@ -135,75 +135,113 @@ const study = lab.util.fromObject({
       "type": "lab.html.Page",
       "items": [
         {
-          "type": "text",
-          "content": "以下の質問文を読んでいただき，あなたにもっとも当てはまると思う選択肢を選んで回答してください。回答は選択肢のボタンをチェックすることで行ってください。"
-        },
-        {
-          "required": true,
-          "type": "radio",
-          "label": " 1. あなたは，猫について，どのように感じていますか？",
-          "options": [
-            {
-              "label": "1. 非常に嫌い",
-              "coding": "1"
-            },
-            {
-              "label": "2. 嫌い",
-              "coding": "2"
-            },
-            {
-              "label": "3. どちらでもない",
-              "coding": "3"
-            },
-            {
-              "label": "4. 好き",
-              "coding": "4"
-            },
-            {
-              "label": "5. 非常に好き",
-              "coding": "5"
-            }
-          ],
-          "name": "Q1"
-        },
-        {
-          "required": true,
-          "type": "radio",
-          "options": [
-            {
-              "label": "1. 非常に嫌い",
-              "coding": "1"
-            },
-            {
-              "label": "2. 嫌い",
-              "coding": "2"
-            },
-            {
-              "label": "3. どちらでもない",
-              "coding": "3"
-            },
-            {
-              "label": "4. 好き",
-              "coding": "4"
-            },
-            {
-              "label": "5. 非常に好き",
-              "coding": "5"
-            }
-          ],
-          "label": " 2. あなたは，犬について，どのように感じていますか？",
-          "name": "Q2"
+          "type": "text"
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "次へ",
+      "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
       "responses": {
         "": ""
       },
       "parameters": {},
-      "messageHandlers": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+// Text/Instructions
+this.options.items.push({
+          "type": "text",
+           "title": "調査",
+           "content": "以下の文章を読んで，あなたにどの程度当てはまるかどうかを回答してください。当てはまる選択肢を選ぶことで回答を行って下さい。"
+        })
+
+// Multiple choice
+const items = [
+  '個人的な問題について考え続けるせいで，寝付きにくいことがよくある', 
+  '私は心をかき乱す思考を避けられないことがよくある', 
+  '誰かが私を不当に非難しても，「その人が正しいかもしれない 」と考えずにはいられない', 
+  'ストレスを感じたとしても，なんとか自分の思考を制御できる', 
+  '私はいつも自分の考えや行動を非難している', 
+  'どれだけ小さなことだとしても，挫折は私を打ちのめす', 
+  'あることについて考えないようにしようと決めたとき，大抵は成功する', 
+  '特定のことについて考えるのをやめることは，私にとって非常にたやすい', 
+  '「恥ずかしい経験」，または「面倒な経験」，あるいは「苦痛な経験」の後には，「心配な気分」または「イライラした気分」，あるいは「悲しい気分」を長い間感じる', 
+  'わずらわしい思考から抜け出すことは私にとって簡単だ', 
+  '私の心を頻繁に支配する考え，あるいはイメージがいくつかある', 
+  '私の過去には，思い出さずにはいられないネガティブなことがいくつかある', 
+  '私は，数日間は(恋人，両親，友達などとの)喧嘩を頭から追い出すことができない', 
+  '私はポジティブ感情やネガティブ感情を制御することが得意だと思う', 
+  '私が私の考えを制御するというよりは，私の考えが私を制御している', 
+  '頭に入ってくることを避けられない思考がある', 
+  '私の思考は制御することができない', 
+  '私は普段は嫌な思考によって打ちのめされることはない', 
+  '私はいくつかの思考（例，「私はダメだ」，「私は役に立たない」，「私には得意なことは何もない」など）から抜け出すことができない', 
+  '怒ったり，誰かと喧嘩したりした時は，そのことについて考えるのをやめられず，集中したり，仕事（勉強）したりすることがほとんどできない', 
+  '私は，ほとんど苦労することなく，「不快な思考」あるいは「不快なイメージ」を頭から追い出す', 
+  '私は忍耐強く，冷静さを簡単に失ったりはしない'
+];
+
+//各項目と尺度名を配列に格納
+var itemsArray = [];
+var itemNO;
+
+for(let i = 0; i < items.length; i++){
+  itemNO = i + 1;
+  itemsArray.push(
+    {
+      "label": items[i],
+      "name": "TCAQ"+itemNO
+    }
+  )
+}
+
+//ランダム順にする場合に並び替え（ランダムにする場合はコメントを消してください）
+//itemsArray = this.random.shuffle(itemsArray)
+
+//選択肢
+for (let i = 0; i < items.length; i++){
+itemNO = i+1;
+  this.options.items.push({
+          "required": true,
+          "type": "radio",
+          "options": [
+            {
+              "label": "1.まったく当てはまらない",
+              "coding": "1"
+            },
+            {
+              "label": "2.あまり当てはまらない",
+              "coding": "2"
+            },
+            {
+              "label": "3.どちらともいえない",
+              "coding": "3"
+            },
+            {
+              "label": "4.やや当てはまる",
+              "coding": "4"
+            },
+            {
+              "label": "5.かなり当てはまる",
+              "coding": "5"
+            }
+          ],
+          "label": itemNO +". "+ itemsArray[i].label,
+          "name": itemsArray[i].name,
+          "shuffle": false
+        })
+}
+
+// Raw HTML
+this.options.items.push({
+          "type": "html",
+          "content": "<div class=\"content-horizontal-center\"><button>次へ</button></div>"
+        })
+
+this.options.submitButtonPosition = 'hidden';
+}
+      },
       "title": "questionnaire"
     }
   ]
