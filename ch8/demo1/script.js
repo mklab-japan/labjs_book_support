@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "simon-task",
+      "filePrefix": "rating-task-canvas-key",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "simon-task",
+    "title": "rating-task-canvas-key",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -28,8 +28,8 @@ const study = lab.util.fromObject({
       "items": [
         {
           "type": "text",
-          "title": "サイモン課題",
-          "content": "この実験では青色またはオレンジ色の円が呈示されます。円の色が青の場合は「fキー」を，オレンジの場合は「jキー」を押してください。"
+          "title": "評定課題",
+          "content": "この実験では食物の画像が呈示されます。美味しさを1点（美味しそうではない）から5点（美味しそう）で評価して下さい。"
         }
       ],
       "scrollTop": true,
@@ -47,204 +47,16 @@ const study = lab.util.fromObject({
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
+          "image": "1.jpg"
         },
         {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
+          "image": "2.jpg"
         },
         {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
+          "image": "3.jpg"
         },
         {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "blue",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "-200",
-          "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
+          "image": "4.jpg"
         }
       ],
       "sample": {
@@ -256,7 +68,7 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "simonTask",
+      "title": "ratingTask",
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -272,98 +84,118 @@ const study = lab.util.fromObject({
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "i-text",
+                "type": "image",
                 "left": 0,
                 "top": 0,
+                "angle": 0,
+                "width": 400,
+                "height": 250,
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[this.parameters.image] }"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 200,
+                "angle": 0,
+                "width": 416,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "美味しさを評定してください",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              },
+              {
+                "type": "i-text",
+                "left": -200,
+                "top": 250,
                 "angle": 0,
                 "width": 17.76,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "+",
+                "text": "1",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "": ""
-            },
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "fixation",
-            "timeout": "500"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": 400,
-                "angle": 0,
-                "width": 895.64,
-                "height": 90.4,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "${this.parameters.word}",
-                "text": "${this.parameters.word}",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "80",
                 "fontFamily": "sans-serif",
                 "lineHeight": 1.16,
                 "textAlign": "center"
               },
               {
-                "type": "circle",
-                "left": "${this.parameters.position}",
-                "top": 0,
-                "angle": 0,
-                "width": "50",
-                "height": 55,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "${this.parameters.color}"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "keypress(f)": "blue",
-              "keypress(j)": "green"
-            },
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "stimulus",
-            "correctResponse": "${this.parameters.color}"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
                 "type": "i-text",
-                "left": 0,
-                "top": 0,
+                "left": -100,
+                "top": 250,
                 "angle": 0,
-                "width": 554.11,
+                "width": 17.76,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "${this.state.correct? \"正解\" : \"不正解\"}",
+                "text": "2",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 17.76,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "3",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              },
+              {
+                "type": "i-text",
+                "left": 100,
+                "top": 250,
+                "angle": 0,
+                "width": 17.76,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "4",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              },
+              {
+                "type": "i-text",
+                "left": 200,
+                "top": 250,
+                "angle": 0,
+                "width": 17.76,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "5",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
@@ -376,15 +208,22 @@ const study = lab.util.fromObject({
               800,
               600
             ],
-            "files": {},
+            "files": {
+              "1.jpg": "embedded\u002Ffa03cdae569849721ff4d0b23d7ef570fb46c34d629bc0215ba636362aad3406.jpg",
+              "2.jpg": "embedded\u002F52109d5ae355bb1ed7537069d38373dff623655e5dbd33848a1c75ed76d887f1.jpg",
+              "3.jpg": "embedded\u002F14ad2487171aae42fcfddb59838e5ef9584c909e045d3e1d091c695b3fbf103b.jpg",
+              "4.jpg": "embedded\u002Ff57ba8d0a9b281c8681defb745684cb99af7492986d5f5e63f680e9c7ddf8417.jpg"
+            },
             "responses": {
-              "": ""
+              "keypress(1)": "1",
+              "keypress(2)": "2",
+              "keypress(3)": "3",
+              "keypress(4)": "4",
+              "keypress(5)": "5"
             },
             "parameters": {},
             "messageHandlers": {},
-            "title": "feedback",
-            "timeout": "1000",
-            "tardy": true
+            "title": "stimulus"
           },
           {
             "type": "lab.canvas.Screen",
@@ -395,12 +234,12 @@ const study = lab.util.fromObject({
             ],
             "files": {},
             "responses": {
-              "": ""
+              "undefined": ""
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "blank",
-            "timeout": "1000"
+            "timeout": "500"
           }
         ]
       }

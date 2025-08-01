@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "flanker-task",
+      "filePrefix": "simon-task",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "flanker-task",
+    "title": "simon-task",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -28,12 +28,12 @@ const study = lab.util.fromObject({
       "items": [
         {
           "type": "text",
-          "title": "フランカー課題",
-          "content": "この実験では「＜」または「＜」が呈示されます。中央の記号が「＜」の場合は「fキー」を，「＞」の場合は「jキー」を押してください。"
+          "title": "サイモン課題",
+          "content": "この実験では青色またはオレンジ色の円が呈示されます。円の色が青の場合は「fキー」を，オレンジの場合は「jキー」を押してください。"
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "始める→",
+      "submitButtonText": "始める →",
       "submitButtonPosition": "right",
       "files": {},
       "responses": {
@@ -47,203 +47,203 @@ const study = lab.util.fromObject({
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＜＜＜＜＜",
+          "color": "blue",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "left",
-          "stim": "＞＞＜＞＞",
+          "color": "blue",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＞＞＞＞＞",
+          "color": "orange",
+          "position": "-200",
           "condition": "congruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         },
         {
-          "resp": "right",
-          "stim": "＜＜＞＜＜",
+          "color": "orange",
+          "position": "200",
           "condition": "incongruent"
         }
       ],
@@ -256,7 +256,7 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "flankerTask",
+      "title": "simonTask",
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -276,12 +276,12 @@ const study = lab.util.fromObject({
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 32,
+                "width": 17.76,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "＋",
+                "text": "+",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
@@ -308,21 +308,32 @@ const study = lab.util.fromObject({
             "content": [
               {
                 "type": "i-text",
-                "left": 0,
-                "top": 0,
+                "left": 200,
+                "top": 400,
                 "angle": 0,
-                "width": 650.91,
-                "height": 67.8,
+                "width": 895.64,
+                "height": 90.4,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "black",
-                "text": "${this.parameters.stim}",
+                "fill": "${this.parameters.word}",
+                "text": "${this.parameters.word}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
-                "fontSize": "60",
+                "fontSize": "80",
                 "fontFamily": "sans-serif",
                 "lineHeight": 1.16,
                 "textAlign": "center"
+              },
+              {
+                "type": "circle",
+                "left": "${this.parameters.position}",
+                "top": 0,
+                "angle": 0,
+                "width": "50",
+                "height": 55,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "${this.parameters.color}"
               }
             ],
             "viewport": [
@@ -331,13 +342,13 @@ const study = lab.util.fromObject({
             ],
             "files": {},
             "responses": {
-              "keypress(f)": "left",
-              "keypress(j)": "right"
+              "keypress(f)": "blue",
+              "keypress(j)": "green"
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "stimulus",
-            "correctResponse": "${this.parameters.resp}"
+            "correctResponse": "${this.parameters.color}"
           },
           {
             "type": "lab.canvas.Screen",
@@ -389,7 +400,7 @@ const study = lab.util.fromObject({
             "parameters": {},
             "messageHandlers": {},
             "title": "blank",
-            "timeout": "500"
+            "timeout": "1000"
           }
         ]
       }
@@ -404,7 +415,7 @@ const study = lab.util.fromObject({
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "結果のダウンロード→",
+      "submitButtonText": "結果のダウンロード →",
       "submitButtonPosition": "right",
       "files": {},
       "responses": {

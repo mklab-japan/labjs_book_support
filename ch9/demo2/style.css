@@ -1,1 +1,10 @@
 /* Please define your custom styles here */
+.justify{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell{
+  text-align: center;
+  width: 30px;
+}

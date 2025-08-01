@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "rating-task-canvas-aoi",
+      "filePrefix": "rating-task-page-html-slider",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "rating-task-canvas-AOI",
+    "title": "rating-task-page-HTML-slider",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -81,193 +81,40 @@ const study = lab.util.fromObject({
         "title": "trial",
         "content": [
           {
-            "type": "lab.canvas.Screen",
-            "content": [
+            "type": "lab.html.Page",
+            "items": [
               {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 400,
-                "height": 250,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.image] }"
+                "required": true,
+                "type": "html",
+                "content": "\u003Cdiv class = \"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cimg src = ${this.files[this.parameters.image]} \u003E\u003C\u002Fimg\u003E\r\n\u003C\u002Fdiv\u003E",
+                "name": ""
               },
               {
-                "type": "i-text",
-                "left": 0,
-                "top": 200,
-                "angle": 0,
-                "width": 416,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "美味しさを評定してください",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
+                "type": "text",
+                "title": "\u003Cdiv class = \"content-horizontal-center\"\u003Eどのくらい美味しそうか？\u003C\u002Fdiv\u003E",
+                "content": "\u003Cdiv class = \"justify\"\u003E\n\u003Cspan\u003E美味しそうでない\u003C\u002Fspan\u003E\u003Cspan\u003E美味しそうである\u003C\u002Fspan\u003E\n\u003C\u002Fdiv\u003E"
               },
               {
-                "type": "i-text",
-                "left": -200,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "1",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
+                "required": true,
+                "type": "slider",
+                "label": "\u003Cdiv class = \"justify\"\u003E\u003Cspan class = \"cell\"\u003E0\u003C\u002Fspan\u003E\u003Cspan class = \"cell\"\u003E50\u003C\u002Fspan\u003E\u003Cspan class = \"cell\"\u003E100\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E",
+                "attributes": {
+                  "min": "0",
+                  "max": "100",
+                  "step": "1"
+                },
+                "name": "rating"
               },
               {
-                "type": "i-text",
-                "left": -100,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "2",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "3",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 100,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "4",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "5",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "aoi",
-                "left": -200,
-                "top": 250,
-                "angle": 0,
-                "width": 50,
-                "height": 50,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "1"
-              },
-              {
-                "type": "aoi",
-                "left": -100,
-                "top": 250,
-                "angle": 0,
-                "width": 50,
-                "height": 50,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "2"
-              },
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 50,
-                "height": 50,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "3"
-              },
-              {
-                "type": "aoi",
-                "left": 100,
-                "top": 250,
-                "angle": 0,
-                "width": 50,
-                "height": 50,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "4"
-              },
-              {
-                "type": "aoi",
-                "left": 200,
-                "top": 250,
-                "angle": 0,
-                "width": 50,
-                "height": 50,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "5"
+                "required": true,
+                "type": "html",
+                "content": "\u003Cdiv class = \"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cbutton type = \"submit\"\u003E次へ\u003C\u002Fbutton\u003E\r\n\u003C\u002Fdiv\u003E",
+                "name": ""
               }
             ],
-            "viewport": [
-              800,
-              600
-            ],
+            "scrollTop": true,
+            "submitButtonText": "Continue →",
+            "submitButtonPosition": "hidden",
             "files": {
               "1.jpg": "embedded\u002Ffa03cdae569849721ff4d0b23d7ef570fb46c34d629bc0215ba636362aad3406.jpg",
               "2.jpg": "embedded\u002F52109d5ae355bb1ed7537069d38373dff623655e5dbd33848a1c75ed76d887f1.jpg",
@@ -275,31 +122,30 @@ const study = lab.util.fromObject({
               "4.jpg": "embedded\u002Ff57ba8d0a9b281c8681defb745684cb99af7492986d5f5e63f680e9c7ddf8417.jpg"
             },
             "responses": {
-              "click @1": "1",
-              "click @2": "2",
-              "click @3": "3",
-              "click @4": "4",
-              "click @5": "5"
+              "": ""
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "stimulus"
           },
           {
-            "type": "lab.canvas.Screen",
-            "content": [],
-            "viewport": [
-              800,
-              600
+            "type": "lab.html.Page",
+            "items": [
+              {
+                "type": "text"
+              }
             ],
+            "scrollTop": true,
+            "submitButtonText": "Continue →",
+            "submitButtonPosition": "hidden",
             "files": {},
             "responses": {
-              "undefined": ""
+              "": ""
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "blank",
-            "timeout": "500"
+            "timeout": "1000"
           }
         ]
       }

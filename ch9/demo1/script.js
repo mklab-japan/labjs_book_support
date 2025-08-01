@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "rating-task-canvas-key",
+      "filePrefix": "rating-task-page-html",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "rating-task-canvas-key",
+    "title": "rating-task-page-HTML",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -81,133 +81,52 @@ const study = lab.util.fromObject({
         "title": "trial",
         "content": [
           {
-            "type": "lab.canvas.Screen",
-            "content": [
+            "type": "lab.html.Page",
+            "items": [
               {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 400,
-                "height": 250,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.image] }"
+                "required": true,
+                "type": "html",
+                "content": "\u003Cdiv class = \"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cimg src = ${this.files[this.parameters.image]} \u003E\u003C\u002Fimg\u003E\r\n\u003C\u002Fdiv\u003E",
+                "name": ""
               },
               {
-                "type": "i-text",
-                "left": 0,
-                "top": 200,
-                "angle": 0,
-                "width": 416,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "美味しさを評定してください",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
+                "required": true,
+                "type": "radio",
+                "label": "画像のおいしさを評価してください",
+                "options": [
+                  {
+                    "label": "美味しそうでない",
+                    "coding": "1"
+                  },
+                  {
+                    "label": "どちらかといえば美味しそうでない",
+                    "coding": "2"
+                  },
+                  {
+                    "label": "どちらともいえない",
+                    "coding": "3"
+                  },
+                  {
+                    "label": "どちらかといえば美味しそうである",
+                    "coding": "4"
+                  },
+                  {
+                    "label": "美味しそうである",
+                    "coding": "5"
+                  }
+                ],
+                "name": "rating"
               },
               {
-                "type": "i-text",
-                "left": -200,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "1",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": -100,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "2",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "3",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 100,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "4",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": 250,
-                "angle": 0,
-                "width": 17.76,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "5",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
+                "required": true,
+                "type": "html",
+                "content": "\u003Cdiv class = \"content-horizontal-center content-vertical-center\"\u003E\r\n  \u003Cbutton type = \"submit\"\u003E次へ\u003C\u002Fbutton\u003E\r\n\u003C\u002Fdiv\u003E",
+                "name": ""
               }
             ],
-            "viewport": [
-              800,
-              600
-            ],
+            "scrollTop": true,
+            "submitButtonText": "Continue →",
+            "submitButtonPosition": "hidden",
             "files": {
               "1.jpg": "embedded\u002Ffa03cdae569849721ff4d0b23d7ef570fb46c34d629bc0215ba636362aad3406.jpg",
               "2.jpg": "embedded\u002F52109d5ae355bb1ed7537069d38373dff623655e5dbd33848a1c75ed76d887f1.jpg",
@@ -215,31 +134,30 @@ const study = lab.util.fromObject({
               "4.jpg": "embedded\u002Ff57ba8d0a9b281c8681defb745684cb99af7492986d5f5e63f680e9c7ddf8417.jpg"
             },
             "responses": {
-              "keypress(1)": "1",
-              "keypress(2)": "2",
-              "keypress(3)": "3",
-              "keypress(4)": "4",
-              "keypress(5)": "5"
+              "": ""
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "stimulus"
           },
           {
-            "type": "lab.canvas.Screen",
-            "content": [],
-            "viewport": [
-              800,
-              600
+            "type": "lab.html.Page",
+            "items": [
+              {
+                "type": "text"
+              }
             ],
+            "scrollTop": true,
+            "submitButtonText": "Continue →",
+            "submitButtonPosition": "hidden",
             "files": {},
             "responses": {
-              "undefined": ""
+              "": ""
             },
             "parameters": {},
             "messageHandlers": {},
             "title": "blank",
-            "timeout": "500"
+            "timeout": "1000"
           }
         ]
       }
