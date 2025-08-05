@@ -1,5 +1,5 @@
 remote_theme: pages-themes/slate@v0.2.0
-title: 「オンライン心理学調査・実験入門：GoogleフォームとJavaScript (lab.js)を用いて」サポートサイト
+title: 「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」サポートサイト
 plugins:
   - jekyll-remote-theme
 
