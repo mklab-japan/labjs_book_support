@@ -1,10 +1,2 @@
-title: 「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」サポートサイト
-
 theme: jekyll-theme-cayman
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      css: /assets/css/style.css
+title: 「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」サポートサイト
