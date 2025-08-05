@@ -20,14 +20,12 @@ a {
 }
 
 a:hover {
-  color: #001affc7; 
+  color: #007bffb1; 
 }
 
-h2 {
-  background-color: #cccccc;
-  color: #222222;
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
+    color:#323232
 }
-
-h3{
-  color: #222222; 
+.main-content h2{
+  background-color: #feffec;
 }
