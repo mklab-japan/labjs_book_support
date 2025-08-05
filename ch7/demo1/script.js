@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "simon-task",
+      "filePrefix": "stroop-task",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "simon-task",
+    "title": "stroop-task",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -28,8 +28,8 @@ const study = lab.util.fromObject({
       "items": [
         {
           "type": "text",
-          "title": "サイモン課題",
-          "content": "この実験では青色またはオレンジ色の円が呈示されます。円の色が青の場合は「fキー」を，オレンジの場合は「jキー」を押してください。"
+          "title": "ストループ課題",
+          "content": "この実験では赤色または緑色の文字の「赤」または「緑」が呈示されます。文字の色が赤の場合は「fキー」を，緑の場合は「jキー」を押してください。"
         }
       ],
       "scrollTop": true,
@@ -47,203 +47,203 @@ const study = lab.util.fromObject({
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "-200",
+          "color": "red",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "blue",
-          "position": "200",
+          "color": "red",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "-200",
+          "color": "green",
+          "word": "赤",
           "condition": "congruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         },
         {
-          "color": "orange",
-          "position": "200",
+          "color": "green",
+          "word": "緑",
           "condition": "incongruent"
         }
       ],
@@ -256,7 +256,7 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "simonTask",
+      "title": "stroopTask",
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -325,15 +325,22 @@ const study = lab.util.fromObject({
                 "textAlign": "center"
               },
               {
-                "type": "circle",
-                "left": "${this.parameters.position}",
+                "type": "i-text",
+                "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": "50",
-                "height": 55,
+                "width": 895.64,
+                "height": 90.4,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "${this.parameters.color}"
+                "fill": "${this.parameters.color}",
+                "text": "${this.parameters.word}",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": "80",
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
               }
             ],
             "viewport": [
@@ -342,7 +349,7 @@ const study = lab.util.fromObject({
             ],
             "files": {},
             "responses": {
-              "keypress(f)": "blue",
+              "keypress(f)": "red",
               "keypress(j)": "green"
             },
             "parameters": {},
