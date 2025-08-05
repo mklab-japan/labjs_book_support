@@ -3,3 +3,16 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
+.page-header {
+  background: linear-gradient(to right, #007BFF, #FFD700); /* 青 → 黄 */
+}
+
+/* リンクの色を青に */
+a {
+  color: #007BFF; /* ブルー */
+}
+
+a:hover {
+  color: #0056b3; /* 少し濃い青にホバー時変更 */
+}
