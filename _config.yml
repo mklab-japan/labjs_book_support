@@ -4,4 +4,4 @@ plugins:
   - jekyll-remote-theme
 
 include:
-  - assets/css/custom.css
+  - assets/css/custom.scss
