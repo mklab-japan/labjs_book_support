@@ -15,11 +15,11 @@ body {
 
 /* リンクの色を青に */
 a {
-  color: #007BFF; /* ブルー */
+  color: #222222; 
 }
 
 a:hover {
-  color: #0056b3; /* 少し濃い青にホバー時変更 */
+  color: #666666; 
 }
 
 h1{
@@ -30,4 +30,8 @@ h1{
 h2 {
   background-color: #FFD700;
   color: #eeeeee
+}
+
+h3{
+  color: #007BFF; /* ブルー */
 }
