@@ -149,102 +149,102 @@ const study = lab.util.fromObject({
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
-          "condition": "congruent"
+          "condition": "incongruent"
         },
         {
           "color": "green",
           "word": "赤",
+          "condition": "incongruent"
+        },
+        {
+          "color": "green",
+          "word": "緑",
           "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         },
         {
           "color": "green",
           "word": "緑",
-          "condition": "incongruent"
-        },
-        {
-          "color": "green",
-          "word": "緑",
-          "condition": "incongruent"
+          "condition": "congruent"
         }
       ],
       "sample": {

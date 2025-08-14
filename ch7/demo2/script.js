@@ -48,203 +48,203 @@ const study = lab.util.fromObject({
       "templateParameters": [
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "-200",
+          "position": -200,
           "condition": "congruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "blue",
-          "position": "200",
+          "position": 200,
           "condition": "incongruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": -200,
+          "condition": "incongruent"
+        },
+        {
+          "color": "orange",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
         },
         {
           "color": "orange",
-          "position": "-200",
+          "position": 200,
           "condition": "congruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
-        },
-        {
-          "color": "orange",
-          "position": "200",
-          "condition": "incongruent"
         }
       ],
       "sample": {

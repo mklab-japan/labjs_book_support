@@ -52,6 +52,13 @@ title: オンライン心理学実験・調査入門サポートサイト
  * <a href = "ch7/7-simon-task-demo.json" download>ソースファイル</a> 
 
 ## 第8章
+
+### 刺激画像(大きさ：400pixel × 250pixel)
+* <a href = "ch8/img/1.jpg" download>りんご(1.jpg)</a>
+* <a href = "ch8/img/2.jpg" download>みかん(2.jpg)</a>
+* <a href = "ch8/img/3.jpg" download>いちご(3.jpg)</a>
+* <a href = "ch8/img/4.jpg" download>キウイ(4.jpg)</a>
+
 ### 評価課題（Canvas Screen）（キーボード）
  * [デモ](ch8/demo1/)
  * <a href = "ch8/8-rating-task-canvas-key-demo.json" download>ソースファイル</a>

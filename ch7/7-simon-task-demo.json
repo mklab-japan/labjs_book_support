@@ -291,7 +291,7 @@
           },
           {
             "name": "position",
-            "type": "string"
+            "type": "number"
           },
           {
             "name": "condition",
@@ -402,102 +402,102 @@
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
-            "congruent"
+            "incongruent"
           ],
           [
             "orange",
             "-200",
+            "incongruent"
+          ],
+          [
+            "orange",
+            "200",
             "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
+            "congruent"
           ],
           [
             "orange",
             "200",
-            "incongruent"
-          ],
-          [
-            "orange",
-            "200",
-            "incongruent"
+            "congruent"
           ]
         ]
       },
