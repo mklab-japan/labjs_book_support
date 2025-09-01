@@ -15,7 +15,7 @@ title: オンライン心理学実験・調査入門サポートサイト
 
 ## 第3章
 ### デモデータ（3-demo-deta.xlsx)
- * <a href = "ch3/4-demo-deta.xlsx" download>デモデータ</a>
+ * <a href = "ch3/3-demo-deta.xlsx" download>デモデータ</a>
 
 ## 第4章
 ### Hello world!
@@ -85,7 +85,7 @@ title: オンライン心理学実験・調査入門サポートサイト
  * <a href = "ch10/10-old-new-recognition-task.json" download>ソースファイル</a>
 
 ## 第12章
-### デモデータ（12-demo-deta.csv)
+### デモデータ（12-demo-data.csv)
  * <a href = "ch12/data/12-demo-data.csv" download>デモデータ</a>
 
 ## 第13章
