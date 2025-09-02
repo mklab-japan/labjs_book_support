@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "6-survey2-scripts-demo",
+      "filePrefix": "5-survey2-scripts-demo",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "6-survey2-scripts-demo",
+    "title": "5-survey2-scripts-demo",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -59,7 +59,7 @@ const study = lab.util.fromObject({
           "required": true,
           "type": "text",
           "title": "5. 匿名性の確保",
-          "content": "本実験・調査によって得られた情報は法律による開示請求を除き，匿名性が維持されます。匿名性は実験参加者番号の付与，統計的解析によって保たれます。収集されたデータは個人が特定できるデータが公表されることは決してありません。二次分析などのため個人を特定できない形で個人データを公開する場合があります。加えて，統計的に処理されたデータを学会発表や論文として公表する場合があります。"
+          "content": "本実験・調査によって得られた情報は法律による開示請求を除き，匿名性が維持されます。匿名性は実験参加者番号の付与，統計的解析によって保たれます。収集されたデータについては，個人が特定できる形で公表されることは決してありません。二次分析などのため個人を特定できない形で個人データを公開する場合があります。加えて，統計的に処理されたデータを学会発表や論文として公表する場合があります。"
         },
         {
           "required": true,
