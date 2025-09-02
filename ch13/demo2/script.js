@@ -10,12 +10,12 @@ const study = lab.util.fromObject({
     },
     {
       "type": "lab.plugins.Download",
-      "filePrefix": "14-old-new-recognition-task",
+      "filePrefix": "13-old-new-recognition-task",
       "path": undefined
     }
   ],
   "metadata": {
-    "title": "14-old-new-recognition-task",
+    "title": "13-old-new-recognition-task",
     "description": "",
     "repository": "",
     "contributors": ""
@@ -23,6 +23,26 @@ const study = lab.util.fromObject({
   "files": {},
   "responses": {},
   "content": [
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "再認記憶課題",
+          "content": "この実験では最初に単語を覚えていただきます。画面に呈示された単語を覚えてください。\n\u003Cbr\u003E単語を覚えていただいた後に再認テストが行われます。呈示された単語が覚えた単語（見た単語）か覚えていない単語（見ていない単語）かを判断してください。"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "始める →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "instruction"
+    },
     {
       "type": "lab.flow.Loop",
       "templateParameters": [
@@ -307,6 +327,26 @@ this.options.templateParameters.push({item: item, itemType: 'old'})
           }
         ]
       }
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "ありがとうございました。",
+          "content": "これで実験は終了です。以下の「結果のダウンロード」ボタンを押すと結果をダウンロードできます。"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "結果のダウンロード →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "thanks"
     }
   ]
 })

@@ -128,10 +128,10 @@ const study = lab.util.fromObject({
             "submitButtonText": "Continue →",
             "submitButtonPosition": "hidden",
             "files": {
-              "1.jpg": "embedded\u002Ffa03cdae569849721ff4d0b23d7ef570fb46c34d629bc0215ba636362aad3406.jpg",
-              "2.jpg": "embedded\u002F52109d5ae355bb1ed7537069d38373dff623655e5dbd33848a1c75ed76d887f1.jpg",
-              "3.jpg": "embedded\u002F14ad2487171aae42fcfddb59838e5ef9584c909e045d3e1d091c695b3fbf103b.jpg",
-              "4.jpg": "embedded\u002Ff57ba8d0a9b281c8681defb745684cb99af7492986d5f5e63f680e9c7ddf8417.jpg"
+              "1.jpg": "embedded\u002F7b56076dd337b10f9a0f20c7a44600730898ed81543ddb521eb52245f51c1e68.jpg",
+              "3.jpg": "embedded\u002F53465a2456f0e8f22f6ae9003a8591cd9c956d61aa88940b95cec9e13f3ea9fc.jpg",
+              "4.jpg": "embedded\u002Fa2f84196466e437c5bdcb7848ecde6251964666c45b3e90747b244591ab807fd.jpg",
+              "2.jpg": "embedded\u002Fffff047f5f41bc1e7d3eb66d33a24581b380f37e3b4415d3ad3f3fb77f995211.jpg"
             },
             "responses": {
               "": ""

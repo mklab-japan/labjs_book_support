@@ -102,7 +102,7 @@
           "filter": "f"
         },
         {
-          "label": "green",
+          "label": "orange",
           "event": "keypress",
           "filter": "j"
         }
@@ -122,7 +122,7 @@
         }
       ],
       "title": "stimulus",
-      "_tab": "Content",
+      "_tab": "Behavior",
       "correctResponse": "${this.parameters.color}"
     },
     "2": {
@@ -685,7 +685,7 @@
         }
       ],
       "title": "feedback",
-      "_tab": "Content",
+      "_tab": "Behavior",
       "timeout": "1000",
       "tardy": true
     },

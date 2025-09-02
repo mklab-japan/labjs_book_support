@@ -472,12 +472,90 @@
       "_tab": "Behavior",
       "tardy": false
     },
+    "24": {
+      "id": "24",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "再認記憶課題",
+          "content": "この実験では最初に単語を覚えていただきます。画面に呈示された単語を覚えてください。\n<br>単語を覚えていただいた後に再認テストが行われます。呈示された単語が覚えた単語（見た単語）か覚えていない単語（見ていない単語）かを判断してください。"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "始める →",
+      "submitButtonPosition": "right",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "instruction"
+    },
+    "35": {
+      "id": "35",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "ありがとうございました。",
+          "content": "これで実験は終了です。以下の「結果のダウンロード」ボタンを押すと結果をダウンロードできます。"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "結果のダウンロード →",
+      "submitButtonPosition": "right",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "thanks"
+    },
     "root": {
       "id": "root",
       "title": "root",
       "type": "lab.flow.Sequence",
       "children": [
-        "20"
+        "24",
+        "20",
+        "35"
       ],
       "parameters": [],
       "plugins": [
@@ -486,7 +564,7 @@
         }
       ],
       "metadata": {
-        "title": "14-old-new-recognition-task",
+        "title": "13-old-new-recognition-task",
         "description": "",
         "repository": "",
         "contributors": ""

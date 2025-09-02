@@ -3,10 +3,12 @@ title: オンライン心理学実験・調査入門サポートサイト
 ---
 
 ## このサイトについて
-「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」で章ごとに紹介したlab.jsプログラムのソースファイルとデモ（パソコン用），便利ツールなどを提供しています。ソースファイルはJSON形式です。ソースファイルはクリックするとダウンロードできます。なお，デモを利用したデータ収集はご遠慮ください。
+「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」で章ごとに紹介したlab.jsプログラムのソースファイルとデモ（パソコン用），便利ツールなどを提供しています。ソースファイルはJSON形式です。ソースファイルはクリックするとダウンロードできます。
 
-### 書籍情報
+### 注意事項
+このサイト上で実施していただいたデモのデータは，デモ実施後に保存していただけます。ただし，デモを用いた実験・調査はご遠慮ください。なお，実施していただいたデータがサイト作成者に伝わることや（ご自身で保存された場合以外）保存されることはありません。
 
+## 書籍情報
 
 ## 第1章
 ### 指示忘却課題（リスト法）
@@ -14,8 +16,8 @@ title: オンライン心理学実験・調査入門サポートサイト
  * <a href = "ch1/2-LMDF-demo.json" download>ソースファイル</a>
 
 ## 第3章
-### デモデータ（3-demo-deta.xlsx)
- * <a href = "ch3/3-demo-deta.xlsx" download>デモデータ</a>
+### デモデータ（demodata.xlsx)
+ * <a href = "ch3/demodata.xlsx" download>デモデータ</a>
 
 ## 第4章
 ### Hello world!
@@ -58,26 +60,30 @@ title: オンライン心理学実験・調査入門サポートサイト
 
 ### 刺激画像(大きさ：400pixel × 250pixel)
 * <a href = "ch8/img/1.jpg" download>りんご(1.jpg)</a>
-* <a href = "ch8/img/2.jpg" download>オレンジ(2.jpg)</a>
+* <a href = "ch8/img/2.jpg" download>みかん(2.jpg)</a>
 * <a href = "ch8/img/3.jpg" download>いちご(3.jpg)</a>
 * <a href = "ch8/img/4.jpg" download>キウイ(4.jpg)</a>
 
 ### 評価課題（Canvas Screen）（キーボード）
  * [デモ](ch8/demo1/)
  * <a href = "ch8/8-rating-task-canvas-key-demo.json" download>ソースファイル</a>
+ * <a href = "ch8/8-rating-task-canvas-key-static-demo.json" download>Static版ソースファイル</a>
 
 ### 評価課題（Canvas Screen）（AOI）
  * [デモ](ch8/demo2/)
  * <a href = "ch8/8-rating-task-canvas-aoi-demo.json" download>ソースファイル</a> 
+ * <a href = "ch8/8-rating-task-canvas-aoi-static-demo.json" download>Static版ソースファイル</a>
 
 ## 第9章
 ### 評価課題（Page HTML）
  * [デモ](ch9/demo1/)
  * <a href = "ch9/9-rating-task-page-html-demo.json" download>ソースファイル</a>
+ * <a href = "ch9/9-rating-task-page-html-static-demo.json" download>Static版ソースファイル</a>
 
 ### 評価課題（Page HTML）（スライダー）
  * [デモ](ch9/demo2/)
  * <a href = "ch9/9-rating-task-page-html-slider-demo.json" download>ソースファイル</a> 
+ * <a href = "ch9/9-rating-task-page-html-slider-static-demo.json" download>Static版ソースファイル</a>
 
 ## 第10章
 ### 再認記憶課題
@@ -95,7 +101,7 @@ title: オンライン心理学実験・調査入門サポートサイト
 
 ### 再認記憶課題
  * [デモ](ch13/demo2/)
- * <a href = "ch13/13-old-new-recognition-task.json" download>ソースファイル</a>
+ * <a href = "ch13/13-old-new-recognition-task-demo.json" download>ソースファイル</a>
 
 ## 便利ツール
 書籍では詳しく紹介していませんが，lab.jsと合わせて使うと便利なツールをいくつか作成しました。
