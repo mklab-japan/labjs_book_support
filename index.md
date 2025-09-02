@@ -5,10 +5,13 @@ title: オンライン心理学実験・調査入門サポートサイト
 
 
 ## このサイトについて
+<div style="column-count:2">
+
 <a href = "https://www.nakanishiya.co.jp/book/b10146240.html" arget="_blank" rel="noopener noreferrer">「オンライン心理学実験・調査入門：誰でも簡単,Googleフォームとlab.jsで作れる!」</a>で章ごとに紹介したlab.jsプログラムのソースファイルとデモ（パソコン用），正誤情報，便利ツールなどを提供しています。ソースファイル（JSON形式）はクリックするとダウンロードできます。ソースファイルは<a href = "https://lab.js.org/" target="_blank" rel="noopener noreferrer">lab.js Builder</a>で読み込むことができます。
 
+<a href = "https://www.nakanishiya.co.jp/book/b10146240.html" arget="_blank" rel="noopener noreferrer">![表紙](img/book.jpg)</a>
+</div>
 
-![表紙](img/book.jpg)
 
 ### 注意事項
 このサイト上で実施していただいたデモのデータは，デモ実施後に保存していただけます。ただし，デモを用いた実験・調査はご遠慮ください。なお，実施していただいたデータがサイト作成者に伝わることや（ご自身で保存された場合以外）保存されることはありません。
