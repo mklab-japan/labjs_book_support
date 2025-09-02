@@ -9,10 +9,9 @@ title: オンライン心理学実験・調査入門サポートサイト
 </span>
 
 <span>
-<a href = "https://www.nakanishiya.co.jp/book/b10146240.html" arget="_blank" rel="noopener noreferrer"><img src= "img/book.jpg"></a>
+<a href = "https://www.nakanishiya.co.jp/book/b10146240.html" arget="_blank" rel="noopener noreferrer"><img src= "img/book.jpg" height = "160px"></a>
 </span>
 </div>
-
 
 ### 注意事項
 このサイト上で実施していただいたデモのデータは，デモ実施後に保存していただけます。ただし，デモを用いた実験・調査はご遠慮ください。なお，実施していただいたデータがサイト作成者に伝わることや（ご自身で保存された場合以外）保存されることはありません。
