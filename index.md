@@ -38,9 +38,9 @@ title: オンライン心理学実験・調査入門サポートサイト
  * <a href = "ch5/5-survey2-demo.json" download>ソースファイル</a>
 
 ### 心理学調査2 Scripts版（日本語版TCAQ）
+Scripts版は書籍では詳しく取り上げていないため，詳細は[解説](https://labjs.thesimple.ink/scripts%E3%81%A7%E8%B3%AA%E5%95%8F%E7%B4%99%E8%AA%BF%E6%9F%BB%E3%82%92%E4%BD%9C%E3%82%8B-034ebe6c36a3448e836dde7afc2e4012)をご覧ください。
  * [デモ](ch5/demo3/)
  * <a href = "ch5/5-survey2-scripts-demo.json" download>ソースファイル</a>
-   * 書籍では詳しく取り上げてないので，詳しい[解説](https://labjs.thesimple.ink/scripts%E3%81%A7%E8%B3%AA%E5%95%8F%E7%B4%99%E8%AA%BF%E6%9F%BB%E3%82%92%E4%BD%9C%E3%82%8B-034ebe6c36a3448e836dde7afc2e4012)はをご覧ください。
 
 ## 第6章
 ### フランカー課題
