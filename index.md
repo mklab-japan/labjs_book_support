@@ -2,8 +2,6 @@
 title: オンライン心理学実験・調査入門サポートサイト
 ---
 
-
-
 ## このサイトについて
 <div style="column-count:2">
 <span>
