@@ -504,8 +504,8 @@
       "messageHandlers": [
         {
           "title": "",
-          "message": "",
-          "code": ""
+          "message": "end",
+          "code": "this.data.response = document.getElementsByName(\"response\")[0].value;"
         }
       ],
       "title": "recall",

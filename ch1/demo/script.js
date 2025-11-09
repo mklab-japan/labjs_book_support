@@ -314,7 +314,12 @@ for (const trial of trials) {
                         "": ""
                       },
                       "parameters": {},
-                      "messageHandlers": {},
+                      "messageHandlers": {
+                        "end": function anonymous(
+) {
+this.data.response = document.getElementsByName("response")[0].value;
+}
+                      },
                       "title": "recall",
                       "timeout": "30000"
                     }
