@@ -18,7 +18,7 @@ title: オンライン心理学実験・調査入門サポートサイト
 
 ## 第3章
 ### デモデータ（demodata.xlsx)
- * <a href="ch3/demodata.xlsx" download>デモデータ</a>
+ * <a href="ch3/data/demodata.xlsx" download>デモデータ</a>
 
 ## 第4章
 ### Hello world!
