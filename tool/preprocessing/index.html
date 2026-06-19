@@ -65,15 +65,14 @@
 
             <li>
               <strong>senderで行を絞り込む</strong><br>
-              sender列に含まれる値のうち，残したい行に対応するsenderにチェックを入れます。
-              たとえば，実験試行に対応するScreenだけを残す，質問項目に対応するFormだけを残す，
-              といった使い方ができます。
+              sender列はlab.jsのコンポーネント名に対応しています。sender列に含まれる値のうち，残したい行に対応するsenderにチェックを入れることで，必要なコンポーネントのデータのみを抽出できます。
+              たとえば，実験試行に対応するコンポーネントだけを残すといった使い方ができます。
             </li>
 
             <li>
               <strong>設定を適用して確認する</strong><br>
               「設定を適用」を押すと，値補完，senderによる行フィルタ，列選択の順に処理されます。
-              結果は下部のプレビューに表示されます。
+              処理過程と結果は下部のプレビューに表示されます。
             </li>
 
             <li>
@@ -92,7 +91,7 @@
         <div>
           <h2>データファイルを読み込む</h2>
           <p class="small">
-            JSON配列，JSON Lines，CSV，TSVに対応しています。
+            JSON形式（.json, .txt），CSV形式（.csv, .txt）に対応しています。
           </p>
         </div>
       </div>
@@ -100,7 +99,7 @@
       <input
         type="file"
         id="fileInput"
-        accept=".json,.jsonl,.txt,.csv,.tsv"
+        accept=".json,.txt,.csv"
       />
 
       <div id="loadMessage" class="message"></div>
@@ -113,14 +112,14 @@
           <h2>グループ単位で値を補完する</h2>
           <p class="small">
             Rの <code>group_by()</code> + <code>fill()</code> に相当します。
-            例：participantIDでグループ化して，age列やgender列の値を参加者内で補完します。
+            例：参加者を識別する列（例：participantID）でグループ化して，age列やgender列の値を参加者内で補完します。
           </p>
         </div>
       </div>
 
       <div class="note">
         <label>
-          グループ化する列:
+          グループ化に使用する列:
           <select id="groupColumnSelect" disabled>
             <option value="">補完しない</option>
           </select>
@@ -145,7 +144,7 @@
           <h2>残す列を選択する</h2>
           <p class="small">
             sender列は固定で残すため，ここには表示しません。
-            補完する列にチェックした場合，同じ列は自動的にここでも選択されます。
+            補完する列にチェックした列は自動的にここでも選択されます。
           </p>
         </div>
       </div>
@@ -164,7 +163,7 @@
         <div>
           <h2>senderで行を絞り込む</h2>
           <p class="small">
-            sender列に含まれる値を表示します。チェックしたsenderの行だけを残します。
+            sender列に含まれる値（行名）を表示しています。チェックしたsenderの値を持つ行だけを残します。
           </p>
         </div>
       </div>
@@ -184,7 +183,7 @@
         <div>
           <h2>適用・プレビュー</h2>
           <p class="small">
-            設定を適用すると，補完 → senderフィルタ → 列選択の順に処理します。
+            設定を適用すると処理が実行されます。
           </p>
         </div>
       </div>
@@ -196,6 +195,7 @@
       </div>
 
       <div id="previewMessage" class="message"></div>
+      <div id="processSummary" class="summary-box"></div>
       <div id="preview"></div>
     </section>
 
@@ -220,7 +220,6 @@
         <p>
           読み込んだデータは利用者のブラウザ上で処理されます。
           本ツールがデータを作者のサーバー等にアップロード・保存することはありません。
-          ただし，利用環境や改変版のコードによって挙動が異なる可能性があります。
         </p>
 
         <p>
@@ -231,7 +230,7 @@
       </div>
 
       <div class="credit">
-        <p>小林正法</p>
+        <p>作成者：小林正法</p>
       </div>
     </section>
   </main>

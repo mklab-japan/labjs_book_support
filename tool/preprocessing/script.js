@@ -2,6 +2,7 @@ let rawData = [];
 let selectedData = [];
 let allColumns = [];
 let selectedOutputColumns = [];
+let originalFileName = "";
 
 // file
 const fileInput = document.getElementById("fileInput");
@@ -31,6 +32,7 @@ const resetOutputBtn = document.getElementById("resetOutputBtn");
 const downloadBtn = document.getElementById("downloadBtn");
 const preview = document.getElementById("preview");
 const previewMessage = document.getElementById("previewMessage");
+const processSummary = document.getElementById("processSummary");
 
 // events
 fileInput.addEventListener("change", handleFile);
@@ -58,6 +60,7 @@ function handleFile(event) {
   if (!file) return;
 
   resetState();
+  originalFileName = file.name;
 
   const reader = new FileReader();
 
@@ -98,6 +101,7 @@ function handleFile(event) {
       loadMessage.className = "message";
 
       enableButtons();
+      clearProcessSummary();
       renderPreview(selectedData, selectedOutputColumns);
 
     } catch (error) {
@@ -359,11 +363,8 @@ function renderFillColumnCheckboxes(columns) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = column;
-
-    // デフォルトでは全解除
     checkbox.checked = false;
 
-    // fill対象にした列は，出力列にも自動でチェックを入れる
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) {
         checkOutputColumns([column]);
@@ -495,7 +496,6 @@ function findFirstNonEmptyValue(data, indices, column) {
 
 // ------------------------------------------------------------
 // 3. select columns
-// senderは固定で残すので，選択肢には出さない
 // ------------------------------------------------------------
 
 function renderColumnCheckboxes(columns) {
@@ -509,8 +509,6 @@ function renderColumnCheckboxes(columns) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = column;
-
-    // デフォルトでは全解除
     checkbox.checked = false;
 
     wrapper.appendChild(checkbox);
@@ -588,8 +586,6 @@ function renderSenderCheckboxes(data) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = value;
-
-    // デフォルトでは全解除
     checkbox.checked = false;
 
     wrapper.appendChild(checkbox);
@@ -643,7 +639,6 @@ function deselectAllSenders() {
 
 // ------------------------------------------------------------
 // 5. apply all settings
-// group_by + fill → filter(sender) → select(sender, ...)
 // ------------------------------------------------------------
 
 function applyAllSettings() {
@@ -681,25 +676,27 @@ function applyAllSettings() {
   }
 
   const selectedSenderSet = new Set(selectedSenderValues);
-
-  // senderは必ず残す
   const outputColumns = Array.from(new Set(["sender", ...selectedColumns]));
 
   let processedData = rawData.map(row => ({ ...row }));
 
-  // 1. group_by + fill
+  const originalRowCount = processedData.length;
+  const originalColumnCount = allColumns.length;
+
   processedData = fillByGroup(
     processedData,
     groupColumn,
     fillColumns
   );
 
-  // 2. filter(sender %in% ...)
+  const rowCountBeforeSenderFilter = processedData.length;
+
   processedData = processedData.filter(row => {
     return selectedSenderSet.has(String(row.sender));
   });
 
-  // 3. select(sender, ...)
+  const rowCountAfterSenderFilter = processedData.length;
+
   processedData = processedData.map(row => {
     const newRow = {};
 
@@ -713,16 +710,25 @@ function applyAllSettings() {
   selectedData = processedData;
   selectedOutputColumns = outputColumns;
 
-  let fillInfo = "";
-
-  if (groupColumn && fillColumns.length > 0) {
-    fillInfo = ` ${groupColumn}でグループ化し，${fillColumns.length}列を補完しました。`;
-  }
+  const summary = {
+    originalRowCount,
+    originalColumnCount,
+    groupColumn,
+    fillColumns,
+    selectedSenderValues,
+    rowCountBeforeSenderFilter,
+    rowCountAfterSenderFilter,
+    excludedRowCount: rowCountBeforeSenderFilter - rowCountAfterSenderFilter,
+    outputColumnCount: outputColumns.length,
+    outputColumns,
+    missingCounts: countMissingValues(selectedData, outputColumns)
+  };
 
   previewMessage.textContent =
-    `${selectedData.length}行，${outputColumns.length}列のデータを作成しました。${fillInfo}`;
+    `${selectedData.length}行，${outputColumns.length}列のデータを作成しました。`;
   previewMessage.className = "message";
 
+  renderProcessSummary(summary);
   renderPreview(selectedData, selectedOutputColumns);
   downloadBtn.disabled = false;
 }
@@ -741,9 +747,91 @@ function resetOutput() {
     `元データに戻しました。${selectedData.length}行，${selectedOutputColumns.length}列です。`;
   previewMessage.className = "message";
 
+  clearProcessSummary();
   renderPreview(selectedData, selectedOutputColumns);
 
   downloadBtn.disabled = false;
+}
+
+// ------------------------------------------------------------
+// process summary
+// ------------------------------------------------------------
+
+function countMissingValues(data, columns) {
+  const result = {};
+
+  columns.forEach(column => {
+    result[column] = 0;
+  });
+
+  data.forEach(row => {
+    columns.forEach(column => {
+      if (isEmptyValue(row[column])) {
+        result[column] += 1;
+      }
+    });
+  });
+
+  return result;
+}
+
+function renderProcessSummary(summary) {
+  processSummary.innerHTML = "";
+
+  const title = document.createElement("h3");
+  title.textContent = "処理過程";
+  processSummary.appendChild(title);
+
+  const list = document.createElement("ul");
+
+  list.appendChild(createSummaryItem(
+    `元データ: ${summary.originalRowCount}行 × ${summary.originalColumnCount}列`
+  ));
+
+  if (summary.groupColumn && summary.fillColumns.length > 0) {
+    list.appendChild(createSummaryItem(
+      `値の補完: ${summary.groupColumn}でグループ化し，${summary.fillColumns.join(", ")} を補完`
+    ));
+  } else {
+    list.appendChild(createSummaryItem("値補完: なし"));
+  }
+
+  list.appendChild(createSummaryItem(
+    `senderでの行の絞り込み: ${summary.rowCountBeforeSenderFilter}行 → ${summary.rowCountAfterSenderFilter}行（${summary.excludedRowCount}行除外）`
+  ));
+
+  list.appendChild(createSummaryItem(
+    `選択したsender: ${summary.selectedSenderValues.join(", ")}`
+  ));
+
+  list.appendChild(createSummaryItem(
+    `列抽出結果: ${summary.originalColumnCount}列 → ${summary.outputColumnCount}列`
+  ));
+
+  processSummary.appendChild(list);
+
+  const missingTitle = document.createElement("h4");
+  missingTitle.textContent = "欠損値の数";
+  processSummary.appendChild(missingTitle);
+
+  const missingList = document.createElement("ul");
+
+  summary.outputColumns.forEach(column => {
+    const count = summary.missingCounts[column] ?? 0;
+    missingList.appendChild(createSummaryItem(`${column}: ${count}件`));
+  });
+
+  processSummary.appendChild(missingList);
+}
+
+function createSummaryItem(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  return li;
+}
+
+function clearProcessSummary() {
+  processSummary.innerHTML = "";
 }
 
 // ------------------------------------------------------------
@@ -815,12 +903,21 @@ function downloadCSV() {
 
   const a = document.createElement("a");
   a.href = url;
-  a.download = "labjs_filtered_data.csv";
+  a.download = makeDownloadFileName(originalFileName);
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
 
   URL.revokeObjectURL(url);
+}
+
+function makeDownloadFileName(filename) {
+  if (!filename) {
+    return "labjs_preprocessed.csv";
+  }
+
+  const baseName = filename.replace(/\.[^/.]+$/, "");
+  return `${baseName}_preprocessed.csv`;
 }
 
 function convertToCSV(data, columns) {
@@ -882,6 +979,7 @@ function resetState() {
   selectedData = [];
   allColumns = [];
   selectedOutputColumns = [];
+  originalFileName = "";
 
   fillColumnCheckboxes.innerHTML = "";
   columnCheckboxes.innerHTML = "";
@@ -895,6 +993,7 @@ function resetState() {
   previewMessage.textContent = "";
   senderMessage.textContent = "";
   fillMessage.textContent = "";
+  clearProcessSummary();
 
   selectAllFillBtn.disabled = true;
   deselectAllFillBtn.disabled = true;
