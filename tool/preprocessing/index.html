@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>lab.js データ前処理ツール</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">lab.js / JATOS preprocessing</div>
+
+      <h1>lab.js データ前処理ツール</h1>
+
+      <p class="lead">
+        lab.jsで出力されたJSON形式またはCSV形式のデータを前処理するためのツールです。
+        参加者単位での値補完，必要な列の選択，sender列に基づく行フィルタをブラウザ上で行い，
+        処理後のデータをCSV形式でダウンロードできます。
+      </p>
+
+      <div class="workflow">
+        <span>JSON / CSV読み込み</span>
+        <span>参加者単位で値を補完</span>
+        <span>必要な列を選択</span>
+        <span>senderで行を絞り込み</span>
+        <span>CSVとして出力</span>
+      </div>
+    </header>
+
+    <section class="section collapsible-section">
+      <details>
+        <summary>
+          <div class="section-header summary-header">
+            <div class="step">?</div>
+            <div>
+              <h2>使い方</h2>
+              <p class="small">
+                クリックすると，基本的な操作手順を表示します。
+              </p>
+            </div>
+          </div>
+        </summary>
+
+        <div class="details-content">
+          <ol class="usage-list">
+            <li>
+              <strong>データファイルを読み込む</strong><br>
+              lab.jsで出力されたJSON形式またはCSV形式のファイルを選択します。
+            </li>
+
+            <li>
+              <strong>必要に応じて値を補完する</strong><br>
+              参加者IDなどの列でグループ化し，ageやgenderなど，一部の行にしか入っていない値を
+              参加者単位で補完します。補完する列にチェックを入れると，その列は出力列にも自動的に含まれます。
+            </li>
+
+            <li>
+              <strong>残す列を選択する</strong><br>
+              分析に必要な列にチェックを入れます。sender列は固定で出力されるため，選択肢には表示されません。
+            </li>
+
+            <li>
+              <strong>senderで行を絞り込む</strong><br>
+              sender列に含まれる値のうち，残したい行に対応するsenderにチェックを入れます。
+              たとえば，実験試行に対応するScreenだけを残す，質問項目に対応するFormだけを残す，
+              といった使い方ができます。
+            </li>
+
+            <li>
+              <strong>設定を適用して確認する</strong><br>
+              「設定を適用」を押すと，値補完，senderによる行フィルタ，列選択の順に処理されます。
+              結果は下部のプレビューに表示されます。
+            </li>
+
+            <li>
+              <strong>CSVをダウンロードする</strong><br>
+              プレビューを確認したら，「CSVをダウンロード」から処理済みデータを保存します。
+              「元に戻す」を押すと，読み込み直後のデータに戻せます。
+            </li>
+          </ol>
+        </div>
+      </details>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">1</div>
+        <div>
+          <h2>データファイルを読み込む</h2>
+          <p class="small">
+            JSON配列，JSON Lines，CSV，TSVに対応しています。
+          </p>
+        </div>
+      </div>
+
+      <input
+        type="file"
+        id="fileInput"
+        accept=".json,.jsonl,.txt,.csv,.tsv"
+      />
+
+      <div id="loadMessage" class="message"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">2</div>
+        <div>
+          <h2>グループ単位で値を補完する</h2>
+          <p class="small">
+            Rの <code>group_by()</code> + <code>fill()</code> に相当します。
+            例：participantIDでグループ化して，age列やgender列の値を参加者内で補完します。
+          </p>
+        </div>
+      </div>
+
+      <div class="note">
+        <label>
+          グループ化する列:
+          <select id="groupColumnSelect" disabled>
+            <option value="">補完しない</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="small">補完する列:</p>
+
+      <div class="button-row">
+        <button id="selectAllFillBtn" disabled>すべて選択</button>
+        <button id="deselectAllFillBtn" disabled>すべて解除</button>
+      </div>
+
+      <div id="fillColumnCheckboxes" class="columns"></div>
+      <div id="fillMessage" class="message"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">3</div>
+        <div>
+          <h2>残す列を選択する</h2>
+          <p class="small">
+            sender列は固定で残すため，ここには表示しません。
+            補完する列にチェックした場合，同じ列は自動的にここでも選択されます。
+          </p>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="selectAllBtn" disabled>すべて選択</button>
+        <button id="deselectAllBtn" disabled>すべて解除</button>
+      </div>
+
+      <div id="columnCheckboxes" class="columns"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">4</div>
+        <div>
+          <h2>senderで行を絞り込む</h2>
+          <p class="small">
+            sender列に含まれる値を表示します。チェックしたsenderの行だけを残します。
+          </p>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="selectAllSenderBtn" disabled>すべて選択</button>
+        <button id="deselectAllSenderBtn" disabled>すべて解除</button>
+      </div>
+
+      <div id="senderCheckboxes" class="columns"></div>
+      <div id="senderMessage" class="message"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">5</div>
+        <div>
+          <h2>適用・プレビュー</h2>
+          <p class="small">
+            設定を適用すると，補完 → senderフィルタ → 列選択の順に処理します。
+          </p>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="applyAllBtn" disabled>設定を適用</button>
+        <button id="resetOutputBtn" disabled>元に戻す</button>
+        <button id="downloadBtn" disabled>CSVをダウンロード</button>
+      </div>
+
+      <div id="previewMessage" class="message"></div>
+      <div id="preview"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="step">i</div>
+        <div>
+          <h2>注意事項・クレジット</h2>
+          <p class="small">
+            本ツールは無保証で提供されます。利用者自身の責任で使用してください。
+          </p>
+        </div>
+      </div>
+
+      <div class="notice">
+        <p>
+          このツールは，lab.jsデータの前処理を補助するためのものです。
+          処理結果の正確性を保証するものではありません。実際の分析に使用する前に，
+          必ず元データと処理後データを確認してください。
+        </p>
+
+        <p>
+          読み込んだデータは利用者のブラウザ上で処理されます。
+          本ツールがデータを作者のサーバー等にアップロード・保存することはありません。
+          ただし，利用環境や改変版のコードによって挙動が異なる可能性があります。
+        </p>
+
+        <p>
+          本ツールの使用によって生じたいかなる損失・不利益についても，作者は責任を負いません。
+          個人情報，機密情報，機微情報を含むデータを扱う場合は，
+          所属機関の倫理審査・研究データ管理方針に従ってください。
+        </p>
+      </div>
+
+      <div class="credit">
+        <p>小林正法</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
