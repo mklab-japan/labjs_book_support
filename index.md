@@ -105,6 +105,11 @@ Scripts版は書籍では詳しく取り上げていないため，詳細は<a h
  * <a href="ch13/13-old-new-recognition-task-demo.json" download>ソースファイル</a>
 
 
+## Open labでのオンライン実験化（第11章）の最新の解説
+第11章ではOpen labを用いたオンライン実験化について紹介していましたが，刊行後，Open labがリニューアルされたため，本書の説明が現行のOpen labに対応できていません。そのため，以下のページに解説を作成しました。お手数ですが，第11章の代替として以下のページをご参照いただければ幸いです。
+
+<a href ="https://labjs.thesimple.ink/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E5%AE%9F%E9%A8%93%EF%BC%88open-lab%E7%B7%A8%EF%BC%89-5aadb17cffef4e97ada432091fa86f37" target="_blank" rel="noopener noreferrer">Open Labでのオンライン実験化の方法</a>
+
 ## 便利ツール
 書籍では詳しく紹介していませんが，lab.jsと合わせて使うと便利なツールをいくつか作成しました。
 
